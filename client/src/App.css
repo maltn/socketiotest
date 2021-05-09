@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+	--button-color: gainsboro;	
+	--button-hover: rgb(194, 194, 194);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
+}
+
+.container {
+	position: absolute;
+	width: 20vw;
+	height: 60vh;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+
+	border: 1px solid gray;
+}
+
+@media (pointer:none), (pointer:coarse) {
+	.container {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+
+#contentWrapper {
+	background-color: rgb(250, 250, 250);
+	width: 100%;
+	height: 90%;
+
+	display: flex;
+	flex-direction: column-reverse;
+	overflow: auto;
+}
+
+#messageWrapper{
+	position: relative;
+	height: 10%;
+	width: 100%;
+}
+
+#messageWrapper > form {
+	height: 100%;
+}
+
+#inputField {
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	border: none;
+	outline: none;
+	padding-left: 5%;
+	font-size: 1.2rem;
+}
+
+#sendBttn {
+	position: absolute;
+	width: 30%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background-color: var(--button-color);
+}
+
+#sendBttn:hover {
+	background-color: var(--button-hover);
+}
+
+.sender {
+	align-self: flex-start;
+	background-color: rgb(240, 240, 240);
+	color: rgb(17,17,17);
+	margin: 0.3rem;
+	padding: 1rem;
+	border-radius: 0.4rem;
+}
+
+.self {
+	align-self: flex-end;
+	background-color: rgb(8, 127, 254);
+	color: white;
+	margin: 0.3rem;
+	padding: 1rem;
+	border-radius: 0.4rem;
+}
+ 
+.self:first-of-type{
+	margin-bottom: 1rem;
+}
