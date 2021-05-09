@@ -27,13 +27,13 @@ function App() {
       <div id="contentWrapper">
         {messages.map((x,i) => {
           return(
-            <>
+            <React.Fragment key={i}>
               {x.senderid === socket.id ? 
-              <div key={i} className="self">{x.msg}</div>
+              <div className="self">{x.msg}</div>
               :
-              <div key={i} className="sender">{x.msg}</div>
+              <div className="sender">{x.msg}</div>
               }
-            </>
+            </React.Fragment>
           )
         })}
       </div>
